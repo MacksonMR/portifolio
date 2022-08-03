@@ -1,0 +1,9 @@
+a{
+    margin-left: 10px;
+    font-size: 20px;
+    color: blue
+}
+nav{
+    border-bottom: solid blue 1px;
+    padding-bottom: 15px;
+}

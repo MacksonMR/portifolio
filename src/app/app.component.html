@@ -1,8 +1,11 @@
-<app-first-component></app-first-component>
-<app-parent-data [name]="userName" [userData]="userData"></app-parent-data>
-<app-directives></app-directives>
-<app-if-render></app-if-render>
-<app-eventos></app-eventos>
-<app-emiter></app-emiter>
-<app-list-render></app-list-render>
-<app-pipes></app-pipes>
+<nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/list">List</a>
+    <p>esse "nav" não usa "href..." e sim 
+        "routerLink"
+    </p>
+</nav>
+<div class="class">
+    <h1>Introdução ao Angular</h1>
+</div>
+<router-outlet></router-outlet>
