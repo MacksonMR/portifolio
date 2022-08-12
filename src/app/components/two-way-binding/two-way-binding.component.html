@@ -1,14 +1,32 @@
+<!--É OBRIGATÓRIO TER ESSA DIV PAI COM A CLASS DE "CLASS"-->
 <div class="class">
-    <h1>two way binding</h1>
+    <h1>Familia - Editar</h1>
     <form action="">
-        <input type="text" [(ngModel)]="name"
-        name="name"
-        placeholder="Digite seu nome"
-        />
-        <input type="text" [(ngModel)]="profissao"
-        name="profissao"
-        placeholder="Digite sua profissão"/>
-        <input type="submit" value="Enviar"/>
+
+        <!--O "[(ngModel)] É UMA FORMA DE TROCAR INFORMAÇÕES ENTRE O HTML E O TS DO COMPONENTE"-->
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Digite seu nome"/>
+        <div style="color: red;" *ngIf="valid">O nome da familia é obrigatório</div>
+       
+        <!-- AQUI FOI USANDO O IF RENDER DETERMINADO PELO VALOR DA SITUAÇÃO -->
+        <div *ngIf="ativo; else nameNotFound">
+            <select [(ngModel)]="ativo" name="ativo" id="">
+                <option selected value="true">Ativo</option>
+                <option value="false">Inativo</option>
+            </select>
+        </div>
+
+        <!--SEGUNDA PARTE DO IF ACIMA (ELSE)-->
+        <ng-template #nameNotFound>
+            <div>
+                <select [(ngModel)]="ativo"  name="ativo" id="">
+                    <option value="true">Ativo</option>
+                    <option selected value="false">Inativo</option>
+                </select>
+            </div>
+        </ng-template>
+
+        <!--EXECUTA A FUNÇÃO QUE SERA REALIZADA NO .TS DESSE COMPONENTE-->
+        <button class="btn-preto" (click)="Cancelar()">Cancelar</button>
+        <button class="btn-preto"  (click)="UpdateFamilia()">Confirmar</button>
     </form>
-    <p>O nome é: {{ name }} e sua profissão é: {{ profissao }}</p>
 </div>

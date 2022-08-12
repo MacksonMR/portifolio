@@ -1,5 +1,6 @@
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Animal } from 'src/app/interfaces/Animal';
+import { Familia } from 'src/app/interfaces/Familia';
 import { ListService } from 'src/app/services/list.service';
 
 @Component({
@@ -10,27 +11,33 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
 
-  animals: Animal[] = [];
+  familias: Familia[] = [];
 
-  animalDetails = '';
+  familiaDetails = '';
+  _situacao?: boolean;
 
   constructor(private listService : ListService) {
-    this.getAnimals()
+    this.getFamilias()
   }
 
   ngOnInit(): void {
   }
 
-  showAge(animal: Animal): void{
-    this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos`;
+  showAge(familia: Familia): void{
+    this.familiaDetails = `O nome da familia é: ${familia.nomeFamilia} com o ID: ${familia.idFamilia}`;
+    console.log("botao detalhes")
   }
 
-  removeAnimal(animal: Animal){
-    this.animals = this.animals.filter((a) => animal.name !== a.name); //remove apenas no front
-    this.listService.remove(animal.id).subscribe() //responsavel por remover no banco de dados
+  removeFamilia(familia: Familia){
+    this.familias = this.familias.filter((a) => familia.nomeFamilia !== a.nomeFamilia); //remove apenas no front
+    this.listService.remove(familia.idFamilia)//responsavel por remover no banco de dados
   }
 
-  getAnimals(): void{
-    this.listService.getAll().subscribe((animals) => (this.animals = animals));
+  getFamilias(): void{
+    this.listService.getAll().subscribe((familias) => (this.familias = familias));
+  }
+
+  getFamiliaId(familia: Familia): void{
+    this.listService.getItem(familia.idFamilia).subscribe();
   }
 }

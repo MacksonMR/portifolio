@@ -16,6 +16,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { TwoWayBindingNovoComponent } from './components/two-way-binding-novo/two-way-binding-novo.component';
 
 
 
@@ -33,6 +34,7 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     PipesComponent,
     TwoWayBindingComponent,
     ItemDetailComponent,
+    TwoWayBindingNovoComponent,
   ],
   imports: [
     BrowserModule,

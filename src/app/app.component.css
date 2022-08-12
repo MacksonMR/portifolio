@@ -3,7 +3,39 @@ a{
     font-size: 20px;
     color: blue
 }
+
+a:hover{
+    color: red;
+}
+
 nav{
     border-bottom: solid blue 1px;
     padding-bottom: 15px;
+}
+
+h1:hover{
+    color: red;
+}
+
+img{
+    width: 100px; 
+    height: 100px;
+}
+img:hover{
+    width: 150px;
+    height: 150px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin: 2px;
+    border-radius: 4px;
+    width: 125px;
+    height: 30px;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
 }

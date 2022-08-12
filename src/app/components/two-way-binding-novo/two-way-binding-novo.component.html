@@ -1,0 +1,27 @@
+<!--É OBRIGATÓRIO TER ESSA DIV PAI COM A CLASS DE "CLASS"-->
+<div class="class">
+    <h1>Familia - Adicionar</h1>
+    <form action="">
+
+        <!--O "[(ngModel)] É UMA FORMA DE TROCAR INFORMAÇÕES ENTRE O HTML E O TS DO COMPONENTE"-->
+        <input 
+        required type="text"
+         [(ngModel)]="name" 
+         name="name" 
+         placeholder="Digite o nome da familia"
+        />
+        <div style="color: red;" *ngIf="valid">O nome da familia é obrigatório</div>
+       
+        <!-- O VALOR DEFINIDO AQUI, ESTA NO .TS DO COMPONENTE-->
+        <div>
+            <select [(ngModel)]="ativo" name="ativo" id="">
+                <option selected value="true">Ativo</option>
+                <option value="false">Inativo</option>
+            </select>
+        </div>
+
+        <!--EXECUTA A FUNÇÃO QUE SERA REALIZADA NO .TS DESSE COMPONENTE-->
+        <button class="btn-preto" (click)="Cancelar()">Cancelar</button>
+        <button type="submit" class="btn-preto" (click)="CreateFamilia()">Confirmar</button>
+    </form>
+</div>

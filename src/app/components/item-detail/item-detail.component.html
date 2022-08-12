@@ -1,5 +1,41 @@
-<div *ngIf="animal" class="class"> 
-    <p>ID: {{ animal.id }}</p>
-    <h1>Nome: {{ animal.name }}</h1>
-    <p>Tipo: {{ animal.type }}</p>
+<div *ngIf="familia" class="class"> 
+
+    <h1 style="color: gray;">FAMILIA EDIÇÃO</h1>
+    <form action="">
+
+    <p  name="{{ FamiliaID }}" style="display: contents;" [(ngModel)]="FamiliaID">ID: {{ familia.idFamilia }}</p>
+
+    <div>
+        <h1 >Familia:</h1>
+        <input id="familiaNome" name="{{ FamiliaNome }}" [(ngModel)]="FamiliaNome" type="text" value="{{ familia.nomeFamilia }}"/>
+    </div>
+
+    <p>situacao:</p>
+
+    <div  *ngIf="familia.ativo === true">
+        <select>
+            <option selected value="true">Ativo</option>
+            <option value="false">Inativo</option>
+        </select>
+    </div>
+
+    <div  *ngIf="familia.ativo === false">
+        <select>
+            <option value="true">Ativo</option>
+            <option selected value="false">Inativo</option>
+        </select>
+    </div>
+
+    <p>Ultima Atualizacao: {{ familia.dataAtualizacao | date : 'dd/MM/yyyy'}} </p>
+
+    <button onclick="salvar()">
+        Confirmar
+    </button>
+
+</form>
+    <button>
+        Cancelar
+    </button>
 </div>
+
+

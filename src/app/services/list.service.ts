@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Animal } from '../interfaces/Animal';
+import { Familia } from '../interfaces/Familia';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable, Observer } from 'rxjs';
@@ -11,20 +11,38 @@ import { HtmlParser } from '@angular/compiler';
 })
 export class ListService {
 
-  private apiUrl = "http://localhost:3000/animals"
+  //INICIO DA URL PARA SER CONCATENADA NOS METODOS
+  private apiUrl = "https://localhost:7077/familia"
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  remove(id:Number){
-    return this.http.delete<Animal>(`${this.apiUrl}/${id}`)
+  //===============================CRUD====================
+
+  //REMOVE A FAMILIA USANDO O ID
+  remove(id:Number){ 
+    console.log(`delete no service com o id: ${id}`)
+    return this.http.get<Familia>(`${this.apiUrl}/delete/${id}`).subscribe()
   }
 
-  getAll(): Observable<Animal[]>{
-    return this.http.get<Animal[]>(this.apiUrl);
+  //OBTER TODOS
+  getAll(): Observable<Familia[]>{
+    return this.http.get<Familia[]>(`${this.apiUrl}/getall`);
   }
 
-  getItem(id: number): Observable<Animal>{
-    return this.http.get<Animal>(`${this.apiUrl}/${id}`)
+  //METODO PARA OBTER "FAMILIA" PELO ID
+  getItem(id: number): Observable<Familia>{
+
+    //ENVIAR REQUISIÇÃO PARA A API PASSANDO O ID DA "FAMILIA" QUE SERÁ RETORNADA
+    return this.http.get<Familia>(`${this.apiUrl}/getbyid/${id}`);
   }
 
+  //ATUALIZA A FAMILIA
+  update(id:number, descricao:string, situacao:boolean){
+    return this.http.post(`${this.apiUrl}/update/?id=${id}&descricao=${descricao}&ativo=${situacao}`,"").subscribe()
+  }
+
+  //CRIA UMA NOVA FAMILIA
+  create(descricao: string, situacao: boolean){
+    return this.http.get(`${this.apiUrl}/create/?descricao=${descricao}&ativo=${situacao}`)
+  }
 }
