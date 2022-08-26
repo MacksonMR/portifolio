@@ -41,3 +41,5 @@ export class ListRenderComponent implements OnInit {
     this.listService.getItem(familia.idFamilia).subscribe();
   }
 }
+
+

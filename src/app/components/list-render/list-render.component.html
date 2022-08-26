@@ -37,41 +37,43 @@
         <!-- fim -->
 
 
-<!-- tera um for each -->
-        <div class="linha">
+        <!-- tera um for each -->
+        <div *ngFor="let familia of familias">
+            <div class="linha">
 
-            <div class="coluna col-1">
-                <h1>nome</h1>
-                <input disabled value="Turanza - 300ER">
+                <div class="coluna col-1">
+                    <h1>Nome</h1>
+                    <input disabled value='{{familia.nomeFamilia}}'>
+                </div>
+        
+                <div class="coluna col-2">
+                    <h1>Criado em:</h1>
+                    <input disabled value="{{ familia.dataCriacao | date:'dd-MM-yyyy' }}">
+                </div>
+        
+                <div class="coluna col-3">
+                    <h1>Situação</h1>
+                    <select disabled name="situacao" id="">
+                        <option value="1">Ativo</option>
+                        <option value="0">Inativo</option>
+                    </select>
+                </div>
+                
+                <div class="coluna col-4">
+                    <!-- <img src="../../../assets/botao-adicionar.png" onclick="novaFamilia()"> -->
+
+
+                    <img id="obterId" src="../../../assets/editar.png" onclick="">
+
+
+                    <img src="../../../assets/excluir.png">
+
+
+                </div>
+        
             </div>
-    
-            <div class="coluna col-2">
-                <h1>criado em:</h1>
-                <input disabled value="10/10/2022">
-            </div>
-    
-            <div class="coluna col-3">
-                <h1>situação</h1>
-                <select disabled name="situacao" id="">
-                    <option value="1">Ativo</option>
-                    <option value="0">Inativo</option>
-                </select>
-            </div>
-            
-            <div class="coluna col-4">
-                <img src="../../../assets/botao-adicionar.png" onclick="novaFamilia()">
-
-
-                <img id="obterId" src="../../../assets/editar.png" onclick="">
-
-
-                <img src="../../../assets/excluir.png">
-
-
-            </div>
-    
         </div>
-            <!-- fim do for each -->
+        <!-- fim do for each -->
 
 
     </div>
