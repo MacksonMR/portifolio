@@ -6,10 +6,15 @@
 
 <div class="corpo">
     
+    <span class="botao-adicionar" (click)="mostrarFamilia()">
+        <img src="../../../assets/botao-adicionar.png" alt="">
+        <label for="adiconar">Adiconar</label>
+    </span>
+
     <div class="container">
 
         <!-- nova familia -->
-        <div class="linha" id="novaDiv">
+        <div class="linha" *ngIf="novaFamilia">
             <div class="coluna col-1">
                 <h1>nome</h1>
                 <input type="text" id="input-nova-familia" value="">
