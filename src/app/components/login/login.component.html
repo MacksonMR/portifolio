@@ -1,4 +1,4 @@
-    <div class="main-login"> 
+    <div class="main-login">
         <div class="left-login">
             <h1>Forum de problemas<br/>e soluções</h1>
             <img class="left-login-img" src="../../../assets/login-animate.svg" alt="animação">
@@ -7,15 +7,15 @@
             <div class="card-login" *ngIf="showLogin">
                 <h1>LOGIN</h1>
                 <div class="textfield">
-                    <label id="usuario" for="Usuario">Usuário</label>
+                    <label for="Usuario">Usuário</label>
                     <input [(ngModel)]="usuarioLogin" type="text" name="usuarioLogin" placeholder="usuário">
                 </div>
                 <div class="textfield">
-                    <label id="senha" for="Senha">Senha</label>
+                    <label for="Senha">Senha</label>
                     <input [(ngModel)]="senhaLogin" type="password" name="senhaLogin" placeholder="senha">
                 </div>
                 <button class="btn btn-login" (click)="Logar()">Login</button>
-                <button type="button" id="cadastrar" class="btnCad" (click)="hideLogin()">Cadastrar</button>
+                <button class="btnCad" (click)="hideLogin()">Cadastrar</button>
             </div>
 
             <div class="card-login" *ngIf="showLoginCad">

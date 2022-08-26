@@ -1,9 +1,118 @@
 <div class="class">
+
+    <div class="cabeca">
+        <h1>Lista</h1>
+    </div>
+
+<div class="corpo">
+    
+    <div class="container">
+
+        <!-- nova familia -->
+        <div class="linha" id="novaDiv">
+            <div class="coluna col-1">
+                <h1>nome</h1>
+                <input type="text" id="input-nova-familia" value="">
+            </div>
+    
+            <div class="coluna col-2">
+                <h1>criado em:</h1>
+                <input type="date" id="input-data-criada" value="">
+            </div>
+    
+            <div class="coluna col-3">
+                <h1>situação</h1>
+                <select id="input-situacao-nova">
+                    <option value="1">Ativo</option>
+                    <option value="0">Inativo</option>
+                </select>
+            </div>
+            
+            <div class="coluna col-4">
+                <img id="btn-concluir" src="../../../assets/concluir.png" alt="" onclick="novaFamiliaSalvar()">
+                <img src="../../../assets/excluir.png" alt="" onclick="cancelarFamilia()">
+            </div>
+    
+        </div>
+        <!-- fim -->
+
+
+<!-- tera um for each -->
+        <div class="linha">
+
+            <div class="coluna col-1">
+                <h1>nome</h1>
+                <input disabled value="Turanza - 300ER">
+            </div>
+    
+            <div class="coluna col-2">
+                <h1>criado em:</h1>
+                <input disabled value="10/10/2022">
+            </div>
+    
+            <div class="coluna col-3">
+                <h1>situação</h1>
+                <select disabled name="situacao" id="">
+                    <option value="1">Ativo</option>
+                    <option value="0">Inativo</option>
+                </select>
+            </div>
+            
+            <div class="coluna col-4">
+                <img src="../../../assets/botao-adicionar.png" onclick="novaFamilia()">
+
+
+                <img id="obterId" src="../../../assets/editar.png" onclick="">
+
+
+                <img src="../../../assets/excluir.png">
+
+
+            </div>
+    
+        </div>
+            <!-- fim do for each -->
+
+
+    </div>
+
+
+    
+
+
+</div>
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
     <h1>Renderização de Listas ====================================</h1>
     <h2>Lista de Familias</h2>
     <button class="btn-preto" routerLink="/novo">novo</button>
     
-    <!--O OBJETO CHEGA DO .TS COMO "FAMILIAS", E É FEITO UM FOREACH PARA GERAR UM HTML DINAMICO-->
+    
         <div class="tabela" *ngFor="let familia of familias">
              Nome:{{familia.nomeFamilia}}
             - Criado em: {{ familia.dataCriacao | date : 'dd/MM/yyyy' }}
@@ -13,6 +122,11 @@
             <button class="btn-preto" routerLink="/list/{{ familia.idFamilia }}" >Editar</button>
         </div>
 
-    <h3>{{ familiaDetails }}</h3>
+    <h3>{{ familiaDetails }}</h3> 
+-->
+
 
 </div>
+    
+    
+

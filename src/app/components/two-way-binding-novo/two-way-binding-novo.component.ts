@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router'; //biblioteca de rota dinamica
-import { ListService } from 'src/app/services/Familia/list.service'; //IMPORTAÇÃO DO SERVICE PARA OBTER DADOS
+import { ListService } from 'src/app/services/list.service'; //IMPORTAÇÃO DO SERVICE PARA OBTER DADOS
 import { Familia } from 'src/app/interfaces/Familia'; //IMPORTAÇÃO DA MODEL 
 import { Router } from '@angular/router';
 

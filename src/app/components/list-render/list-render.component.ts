@@ -1,7 +1,7 @@
 import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Familia } from 'src/app/interfaces/Familia';
-import { ListService } from 'src/app/services/Familia/list.service';
+import { ListService } from 'src/app/services/list.service';
 
 @Component({
   selector: 'app-list-render',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Familia } from 'src/app/interfaces/Familia'; //interface Animal
 import { ActivatedRoute } from '@angular/router'; //biblioteca de rota dinamica
-import { ListService } from 'src/app/services/Familia/list.service'; //acesso ao service AnimalService
+import { ListService } from 'src/app/services/list.service'; //acesso ao service AnimalService
 
 @Component({
   selector: 'app-item-detail',

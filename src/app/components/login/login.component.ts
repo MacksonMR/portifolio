@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router'; //biblioteca de rota dinamica
-import { ListService } from 'src/app/services/Familia/list.service'; //IMPORTAÇÃO DO SERVICE PARA OBTER DADOS
-import { Usuario } from 'src/app/interfaces/Usuario'; //IMPORTAÇÃO DA MODEL 
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-login',
@@ -23,14 +18,7 @@ export class LoginComponent implements OnInit {
   senhaLogin: string = "";
 
 
-  constructor(
-    private route: ActivatedRoute,
-    private listService: ListService,
-    private router: Router
-  )
-  { 
-    
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -50,16 +38,25 @@ export class LoginComponent implements OnInit {
     this.senhaCad = "";
   }
 
-
+  Cadastrar(){
+    //implementação
+    console.log(this.emailCad);
+    console.log(this.senhaCad);
+    console.log(this.usuarioCad);
+  }
 
   Logar(){
     //implementação
+    console.log(this.usuarioLogin);
+    console.log(this.senhaLogin);
 
-  }
-
-
-  Cadastrar(){
-    //implementação
-
+    if(this.usuarioLogin == "mackson" && this.senhaLogin == "123"){
+      console.log("login realizado")
+    }
+    else{
+      console.log("login recusado")
+    }
   }
 }
+
+
