@@ -1,0 +1,44 @@
+    <div class="main-login"> 
+        <div class="left-login">
+            <h1>Forum de problemas<br/>e soluções</h1>
+            <img class="left-login-img" src="../../../assets/login-animate.svg" alt="animação">
+        </div>
+        <div class="right-login">
+            <div class="card-login" *ngIf="showLogin">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label id="usuario" for="Usuario">Usuário</label>
+                    <input [(ngModel)]="usuarioLogin" type="text" name="usuarioLogin" placeholder="usuário">
+                </div>
+                <div class="textfield">
+                    <label id="senha" for="Senha">Senha</label>
+                    <input [(ngModel)]="senhaLogin" type="password" name="senhaLogin" placeholder="senha">
+                </div>
+                <button class="btn btn-login" (click)="Logar()">Login</button>
+                <button type="button" id="cadastrar" class="btnCad" (click)="hideLogin()">Cadastrar</button>
+            </div>
+
+            <div class="card-login" *ngIf="showLoginCad">
+                <h1>CADASTRO</h1>
+
+                <div class="textfield">
+                    <label for="Email">Email</label>
+                    <input [(ngModel)]="emailCad" type="email" name="emailCad" placeholder="usuario@usurio.com">
+                </div>
+
+                <div class="textfield">
+                    <label for="Usuario">Usuário</label>
+                    <input [(ngModel)]="usuarioCad" type="text" name="usuarioCad" placeholder="usuário">
+                </div>
+
+                <div class="textfield">
+                    <label for="Senha">Senha</label>
+                    <input [(ngModel)]="senhaCad" type="text" name="senhaCad" placeholder="senha">
+                </div>
+
+                <button class="btn btn-login" (click)="Cadastrar()">Cadastrar</button>
+                <button class="btnCad" (click)="hideCadastro()">Logar</button>
+            </div>
+        </div>
+    </div>
+

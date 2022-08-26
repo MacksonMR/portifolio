@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Familia } from '../interfaces/Familia';
+import { Familia } from '../../interfaces/Familia';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable, Observer } from 'rxjs';

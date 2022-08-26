@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TwoWayBindingNovoComponent } from './two-way-binding-novo.component';
 
 describe('TwoWayBindingNovoComponent', () => {
