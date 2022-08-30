@@ -11,8 +11,10 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent implements OnInit {
 
-  familias: Familia[] = [];
+  //variaveis para esconder divs
+  novaFamilia?: boolean;
 
+  familias: Familia[] = [];
   familiaDetails = '';
   _situacao?: boolean;
 
@@ -40,6 +42,11 @@ export class ListRenderComponent implements OnInit {
   getFamiliaId(familia: Familia): void{
     this.listService.getItem(familia.idFamilia).subscribe();
   }
+
+  mostrarFamilia(){
+    this.novaFamilia = true;
+  }
+
 }
 
 
