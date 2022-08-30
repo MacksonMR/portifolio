@@ -12,7 +12,7 @@ import { HtmlParser } from '@angular/compiler';
 export class ListService {
 
   //INICIO DA URL PARA SER CONCATENADA NOS METODOS
-  private apiUrl = "https://localhost:7077/familia"
+  private apiUrl = "https://192.168.1.6:7077/familia"
 
   constructor(private http: HttpClient) {}
 

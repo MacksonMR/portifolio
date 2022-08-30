@@ -18,6 +18,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { TwoWayBindingNovoComponent } from './components/two-way-binding-novo/two-way-binding-novo.component';
 import { LoginComponent } from './components/login/login.component';
+import { BlocoNotasComponent } from './components/bloco-notas/bloco-notas.component';
 
 
 
@@ -36,7 +37,8 @@ import { LoginComponent } from './components/login/login.component';
     TwoWayBindingComponent,
     ItemDetailComponent,
     TwoWayBindingNovoComponent,
-    LoginComponent
+    LoginComponent,
+    BlocoNotasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,143 @@
+<div class="container">
+
+    <div class="title">
+
+        <div class=" col-1 col-titulo">
+            <img src="img/editar.png" alt="">
+        </div>
+
+        <div class="col-2 col-titulo">
+            <input disabled  [(ngModel)]="nomeNota" name="nomeNota" id="nomeNota">
+        </div>
+
+        <div class="col-3 col-titulo">
+            <h1>- o x</h1>
+        </div>
+    </div>
+
+
+    <div class="sub-title">
+
+        <div class="options">
+            
+            <h1 (click)="exibirPopArquivo()" >Arquivo</h1>
+            <h1 (click)="exibirPopEditar()">Editar</h1>
+            <h1 (click)="exibirPopExibir()">Exibir</h1>
+            
+        </div>
+
+        <div class="config">
+            <img src="img/config.png" alt="">
+        </div>
+
+    </div>
+
+                <!-- popup arquivo  -->
+                <div *ngIf="canShowArquivo" (mouseleave)="ocultarPopMenu()" class="arquivoPop">
+                    <p>*Novo</p>
+                    <p>*Nova Janela</p>
+                    <p>*Abrir</p>
+                    <p (click)="salvarNota()">Salvar</p>
+                    <p>*Salvar como</p>
+                    <hr>
+                    <p>*Configurar pagina</p>
+                    <p>*Imprimir</p>
+                    <hr>
+                    <p>*Sair</p>
+                </div>
+                <!-- ============== -->
+
+                <!-- popup editar-->
+                <div *ngIf="canShowEditar" (mouseleave)="ocultarPopMenu()" class="editarPop">
+                    <p>Desfazer</p>
+                    <hr>
+                    <p>Recortar</p>
+                    <p>Copiar</p>
+                    <p>Colar</p>
+                    <p>Excluir</p>
+                    <hr>
+                    <p>Localizar</p>
+                    <p>Localizar próximo</p>
+                    <p>Localizar anterior</p>
+                    <p>Substituir</p>
+                    <p>Vá para</p>
+                    <hr>
+                    <p>Selecionar tudo</p>
+                    <p>hora/data</p>
+                    <hr>
+                    <p>Fonte</p>
+                </div>
+                <!-- ============== -->
+
+                <!-- popup exibir-->
+                <div *ngIf="canShowExibir" (mouseleave)="ocultarPopMenu()" class="exibirPop">
+                    <p>Ampliar</p>
+                    <p>Barra de status</p>
+                    <p>Quebra automatica de linha </p>
+                </div>
+                <!-- ============== -->
+
+
+    <div class="anotacao">
+        <textarea [(ngModel)]="notaEscrita" name="notaEscrita" id="notaEscrita" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="status-bar">
+        
+    </div>
+
+</div>
+ 
+<div class="lembretes-container">
+    <h1>Notas</h1>
+    <div class="nota-div">
+
+        <hr>
+        <div *ngFor="let nota of lista" class="linhaNota">
+            <p>Titulo</p>
+            <p>{{nota.nome}}</p>
+            <p>{{nota.nota}}</p>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<style>
+.lembretes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nota-div {
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.lembretes-container > h1 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+</style>
+
+
+
+
+    <div id="mascaraPop">
+        <div id="popupSalvar">
+            <input id="inputNomeNota" type="text" placeholder="*sem título" [(ngModel)]="nomeNota">
+            <div class="botao">
+                <button id="btn-salvarNota" class="btn" (click)="SalvarNotaConfirmar()">Salvar
+                    <img src="../../../assets/salvar.png" alt="">
+                </button>
+                <button id="btn-cancelarNota" class="btn" (click)="CancelarNota()">Cancelar
+                    <img src="../../../assets/cancelar.png" alt="">
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+

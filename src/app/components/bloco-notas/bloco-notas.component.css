@@ -1,0 +1,268 @@
+.container {
+    margin: 30px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.863);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 6px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    color: rgb(189, 189, 189);
+    height: 10%;
+}
+
+.col-1 {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20%;
+}
+
+.col-2 {
+    margin-left: 30px;
+    width: 60%;
+}
+
+.col-2 > h1 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.col-2 > input {
+    margin-top: 5px;
+    border: none;
+    color: rgb(189, 189, 189);
+    background-color: rgb(36, 36, 36);
+}
+
+.col-3 {
+    width: 20%;
+}
+
+.col-3 > h1 {
+    font-size: 25px;
+    margin: 0px;
+}
+
+img {
+    width: 25px;  
+}
+
+.sub-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    width: 80%;  
+}
+
+.options > h1 {
+    margin-left: 13px;
+    color: rgb(189, 189, 189);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.options > h1:hover {
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+
+.options > img {
+    width: 10px;
+    height: 10px;
+}
+
+.config > img:hover {
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+
+.config {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 20%;
+}
+
+.config > img {
+    margin-right: 15px;
+}
+
+.anotacao {
+    background-color: rgb(53, 53, 53);
+    height: 70%;
+}
+
+.anotacao > textarea {
+    background-color: rgb(53, 53, 53);
+    width: 98.4%;
+    height: 100%;
+    resize: none;
+    color: rgb(189, 189, 189);
+}
+
+.status-bar {
+    height: 10%;
+}
+
+.arquivoPop {
+    background-color: rgb(53, 53, 53);
+    width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 5;
+    position: absolute;
+    margin-left: 17px;
+    display: block;
+}
+
+.arquivoPop > p {
+    margin-left: 0px;
+    padding: 10px;
+    margin: 0;
+    color: rgb(189, 189, 189);;
+}
+
+.arquivoPop > p:hover {
+    background-color: rgb(95, 94, 94);
+    cursor: pointer;
+    border-radius: 6px;
+    border: 15px;
+}
+
+.editarPop {
+    background-color: rgb(53, 53, 53);
+    width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 5;
+    position: absolute;
+    margin-left: 100px;
+    display: block;
+}
+
+.editarPop > p {
+    margin-left: 0px;
+    padding: 10px;
+    margin: 0;
+    color: rgb(189, 189, 189);;
+}
+
+.editarPop > p:hover {
+    background-color: rgb(95, 94, 94);
+    cursor: pointer;
+    border-radius: 6px;
+    border: 15px;
+}
+
+.exibirPop {
+    background-color: rgb(53, 53, 53);
+    width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    z-index: 5;
+    position: absolute;
+    margin-left: 180px;
+    display: block;
+}
+
+.exibirPop > p {
+    margin-left: 0px;
+    padding: 10px;
+    margin: 0;
+    color: rgb(189, 189, 189);;
+}
+
+.exibirPop > p:hover {
+    background-color: rgb(95, 94, 94);
+    cursor: pointer;
+    border-radius: 6px;
+    border: 15px;
+}
+
+.lembretes-container {
+    background-color: rgba(0, 0, 0, 0.863);
+    width: 50vw;
+    height: 40vh;
+    margin-left: 30px;
+    border-radius: 6px;
+}
+
+#popupSalvar {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+    width: 350px;
+    background-color: rgba(44, 44, 44, 0.959);
+    border-radius: 6px;
+
+
+    position:absolute;
+    display: none;
+    top: 50px;
+    left: 50px;
+    z-index: 6;
+}
+
+#popupSalvar > input {
+    margin-top: 10px;
+    margin-right: 15px;
+    height: 30px;
+    border-radius: 6px;
+    outline: none;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    height: 29px;
+    width: 100px;
+    background-color: rgba(75, 74, 74, 0.788);
+    color: rgb(214, 207, 207);
+}
+
+.btn > img {
+    margin-left: 5px;
+}
+
+.btn:hover {
+    background-color: rgba(128, 127, 127, 0.788);
+}
+
+
+#btn-salvarNota > img {
+    margin-left: 20px;
+}
+
+#mascaraPop {
+    background-color: rgba(0, 0, 0, 0.527);
+    position: absolute;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+
