@@ -7,6 +7,8 @@ import { TwoWayBindingNovoComponent } from "./components/two-way-binding-novo/tw
 import { TwoWayBindingComponent } from "./components/two-way-binding/two-way-binding.component";
 import { LoginComponent } from "./components/login/login.component";
 import { BlocoNotasComponent } from "./components/bloco-notas/bloco-notas.component";
+import { HomeComponent } from "./components/home/home.component";
+import { IntroComponent } from "./components/intro/intro.component";
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
     {path: 'novo' , component: TwoWayBindingNovoComponent},
     {path: 'login' , component: LoginComponent},
     {path: 'bloco' , component: BlocoNotasComponent},
+    {path: 'home' , component: HomeComponent},
+    {path: 'intro' , component: IntroComponent},
 ]
 
 @NgModule({

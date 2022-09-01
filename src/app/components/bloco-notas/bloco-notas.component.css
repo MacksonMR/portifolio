@@ -1,18 +1,37 @@
-.container {
-    margin: 30px;
+/* cores */
+* {
+    /* --fontPrincipal: rgb(204, 204, 204);
+    --cor1:  rgba(0, 0, 0, 0.863);
+    --cor2:  rgb(53, 53, 53);
+    --cor3: rgb(71, 71, 71);
+    --cor4: rgb(119, 119, 119); */
+
+    --fontPrincipal: rgb(255, 255, 255);
+    --cor1:  rgba(0, 88, 252, 0.863);
+    --cor2:  rgba(59, 128, 255, 0.863);
+    --cor3: rgba(138, 179, 255, 0.863);
+    --cor4: rgba(155, 190, 253, 0.863);
 }
 
+/* ===================== */
+
+::-webkit-scrollbar {
+    display: none;
+    }
+
+
 .container {
-    background-color: rgba(0, 0, 0, 0.863);
+    background-color: var(--cor1); 
     width: 50vw;
     height: 50vh;
     border-radius: 6px;
+    margin: 30px;
 }
 
 .title {
     display: flex;
     flex-direction: row;
-    color: rgb(189, 189, 189);
+    color: var(--fontPrincipal);
     height: 10%;
 }
 
@@ -35,8 +54,8 @@
 .col-2 > input {
     margin-top: 5px;
     border: none;
-    color: rgb(189, 189, 189);
-    background-color: rgb(36, 36, 36);
+    color: var(--fontPrincipal);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .col-3 {
@@ -67,14 +86,14 @@ img {
 
 .options > h1 {
     margin-left: 13px;
-    color: rgb(189, 189, 189);
+    color: var(--fontPrincipal);
     font-size: 16px;
     padding: 10px;
     border-radius: 6px;
 }
 
 .options > h1:hover {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor3);
     cursor: pointer;
 }
 
@@ -84,7 +103,7 @@ img {
 }
 
 .config > img:hover {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor3);
     cursor: pointer;
 }
 
@@ -100,13 +119,13 @@ img {
 }
 
 .anotacao {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor3);
     height: 70%;
 }
 
 .anotacao > textarea {
-    background-color: rgb(53, 53, 53);
-    width: 98.4%;
+    background-color: var(--cor2);
+    width: 100%;
     height: 100%;
     resize: none;
     color: rgb(189, 189, 189);
@@ -117,7 +136,7 @@ img {
 }
 
 .arquivoPop {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor2);
     width: 200px;
     padding: 10px;
     border-radius: 6px;
@@ -131,18 +150,18 @@ img {
     margin-left: 0px;
     padding: 10px;
     margin: 0;
-    color: rgb(189, 189, 189);;
+    color: var(--fontPrincipal);
 }
 
 .arquivoPop > p:hover {
-    background-color: rgb(95, 94, 94);
+    background-color: var(--cor3);
     cursor: pointer;
     border-radius: 6px;
     border: 15px;
 }
 
 .editarPop {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor2);
     width: 200px;
     padding: 10px;
     border-radius: 6px;
@@ -156,18 +175,18 @@ img {
     margin-left: 0px;
     padding: 10px;
     margin: 0;
-    color: rgb(189, 189, 189);;
+    color: var(--fontPrincipal);
 }
 
 .editarPop > p:hover {
-    background-color: rgb(95, 94, 94);
+    background-color: var(--cor3);
     cursor: pointer;
     border-radius: 6px;
     border: 15px;
 }
 
 .exibirPop {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--cor2);
     width: 200px;
     padding: 10px;
     border-radius: 6px;
@@ -181,18 +200,18 @@ img {
     margin-left: 0px;
     padding: 10px;
     margin: 0;
-    color: rgb(189, 189, 189);;
+    color: var(--fontPrincipal);
 }
 
 .exibirPop > p:hover {
-    background-color: rgb(95, 94, 94);
+    background-color: var(--cor3);
     cursor: pointer;
     border-radius: 6px;
     border: 15px;
 }
 
 .lembretes-container {
-    background-color: rgba(0, 0, 0, 0.863);
+    background-color: var(--cor1);
     width: 50vw;
     height: 40vh;
     margin-left: 30px;
@@ -200,18 +219,14 @@ img {
 }
 
 #popupSalvar {
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     height: 100px;
     width: 350px;
-    background-color: rgba(44, 44, 44, 0.959);
+    background-color: var(--cor2);
     border-radius: 6px;
-
-
     position:absolute;
     display: none;
     top: 50px;
@@ -237,8 +252,8 @@ img {
     border-radius: 6px;
     height: 29px;
     width: 100px;
-    background-color: rgba(75, 74, 74, 0.788);
-    color: rgb(214, 207, 207);
+    background-color: var(--cor3);
+    color: var(--fontPrincipal);
 }
 
 .btn > img {
@@ -246,9 +261,8 @@ img {
 }
 
 .btn:hover {
-    background-color: rgba(128, 127, 127, 0.788);
+    background-color: var(--cor4);
 }
-
 
 #btn-salvarNota > img {
     margin-left: 20px;
@@ -263,6 +277,45 @@ img {
     top: 0px;
     left: 0px;
     z-index: 5;
+}
+
+.lembretes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lembretes-container > h1 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--fontPrincipal);
+}
+
+.nota-div {
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.linhaNota {
+    background-color: var(--cor4);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.linhaNota:hover {
+    background-color: var(--cor3);
+}
+
+.linhaNota > h1 {
+    font-size: 20px;
+    margin: 5px 0px 5px 10px;
+}
+
+.linhaNota > p {
+    font-size: 15px;
+    margin: 5px 0px 5px 10px;
 }
 
 

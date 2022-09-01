@@ -34,7 +34,7 @@
 
                 <!-- popup arquivo  -->
                 <div *ngIf="canShowArquivo" (mouseleave)="ocultarPopMenu()" class="arquivoPop">
-                    <p>*Novo</p>
+                    <p (click)="TrocarCor()">*Novo</p>
                     <p>*Nova Janela</p>
                     <p>*Abrir</p>
                     <p (click)="salvarNota()">Salvar</p>
@@ -88,41 +88,18 @@
 
 </div>
  
+
 <div class="lembretes-container">
     <h1>Notas</h1>
     <div class="nota-div">
-
         <hr>
-        <div *ngFor="let nota of lista" class="linhaNota">
-            <p>Titulo</p>
-            <p>{{nota.nome}}</p>
+        <div *ngFor="let nota of lista" class="linhaNota" (click)="CarregarNota(nota.nome,nota.nota)">
+            <h1>{{nota.nome}}</h1>
             <p>{{nota.nota}}</p>
-            <hr>
         </div>
+        <hr>
     </div>
 </div>
-
-<style>
-.lembretes-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.nota-div {
-    width: 90%;
-    height: 80%;
-    overflow-y: scroll;
-}
-
-.lembretes-container > h1 {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-</style>
-
-
 
 
     <div id="mascaraPop">

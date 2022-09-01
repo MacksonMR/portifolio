@@ -27,6 +27,10 @@ export class BlocoNotasComponent implements OnInit {
   nomeNota: string = "*sem título";
   notaEscrita: string = "";
 
+  // elementos html para setar
+  elemento:any;
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -42,6 +46,8 @@ export class BlocoNotasComponent implements OnInit {
     this.mascaraPopup = document.getElementById("mascaraPop");
     this.salvarPopup = document.getElementById("popupSalvar");
     this.inputNomeNota = document.getElementById("inputNomeNota");
+
+    this.elemento = document.getElementsByClassName('.container'); 
   }
 
   exibirPopArquivo(){
@@ -95,8 +101,9 @@ export class BlocoNotasComponent implements OnInit {
     this.inputNomeNota.style.border= 'none';
   }
 
+  // procurar por item no array
   Existente(){
-    // procurar por item no array
+
     // o array "lista" não esta sendo passado como parametro porque já exitste no contexto atual
     let retorno;
 
@@ -114,7 +121,29 @@ export class BlocoNotasComponent implements OnInit {
     }
   }
 
+  CarregarNota(titulo: string, nota:string){
+    this.nomeNota = titulo;
+    this.notaEscrita = nota;
+  }
   
+  TrocarCor(){
+  
+
+    const teste = this.elemento?.style.setProperty('backgroundColor','red')
+
+
+
+
+    //this.elemento.style.setProperty('backgroundColor','red')
+
+    console.log(this.elemento)
+
+    //const margin = elemento?.style.setProperty('margin','100px')
+
+  
+    
+
+  }
 
 
 }

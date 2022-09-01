@@ -1,0 +1,271 @@
+@keyframes logo-linguagem {
+
+    0% {width: 30;
+        height: 30;
+    }
+
+    50% {width: 80px;
+        height: 80px;
+    }
+
+    100% {width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes anime-btn-projeto {
+    0%{background-color: var(--cor2);letter-spacing: 0px;}
+    50%{background-color: var(--cor3);letter-spacing: 4px;}
+    100%{background-color: var(--cor3);letter-spacing: 0px;}
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    --font-principal: rgb(255, 255, 255);
+    --font-secundaria: rgb(0, 0, 0);
+    --cor1:  rgb(228, 226, 226);
+    --cor2:  rgb(100, 185, 255);
+    --cor3:  rgb(22, 67, 192);
+
+
+}
+
+.container-body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(234, 242, 253), rgb(3, 28, 110));
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 95vw;
+    background-color: var(--cor2);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.315);
+}
+
+main{
+    height: 90%;
+    width: 95%;
+    background-image: url(../../../assets/fundo_portifolio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.315);
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; 
+}
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+}
+
+.div-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--font-principal);
+}
+
+.div-titulo > h1 {
+    margin-right: 10px;
+    font-size: 50px;
+    font-weight: lighter;
+    color: var(--font-principal);
+}
+
+.div-titulo > h2 {
+    margin-right: 8px;
+    font-size: 50px;
+    font-weight: bolder;
+    color: var(--font-principal);
+}
+
+.div-sub-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-sub-titulo > h1 {
+    color: var(--font-principal);
+    font-size: 20px;
+}
+
+.div-botao {
+    margin-top: 30px;
+}
+
+.div-botao > button {
+    height: 35px;
+    width: 120px;
+    margin-left: 10px;
+    color: var(--font-principal);
+    border: none;
+    border-radius: 2px;
+}
+
+#btn-projetos {
+    background-color: var(--cor3);
+    animation: anime-btn-projeto 0.5s linear 3s alternate;
+}
+
+#btn-projetos:hover {
+    background-color: var(--cor3);
+    cursor: pointer;
+}
+
+#btn-sobre {
+    background-color: var(--cor3);
+}
+
+#btn-sobre:hover {
+    background-color: var(--cor2);
+    cursor: pointer;
+}
+
+.coluna {
+    /* border: solid 1px; */
+}
+
+.coluna > img {
+    margin-left: 20px;
+}
+
+.col-1 {
+    width: 30%;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+
+   
+}
+
+.col-1 > button {
+    border: none;
+    border-radius: 6px;
+    height: 30px;
+    width: 80px;
+    margin-left: 10px;
+    background-color: var(--cor2);
+    color: var(--font-secundaria); 
+    letter-spacing: 2px;
+}
+
+.col-1 > button:hover{
+    background-color: var(--cor3);
+    cursor: pointer;
+    color: var(--font-principal);
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width: 30%;
+}
+
+.div-procura > p {
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+
+.div-procura > input {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px 0px 1px 0px;
+    border-color: var(--font-secundaria);
+    outline: none;
+
+}
+
+.div-procura > img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.div-procura > img:hover{
+    cursor: pointer;
+}
+
+#icone-angular{
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+    animation: logo-linguagem;
+    animation-duration: 500ms;
+}
+
+#icone-html5 {
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    animation: logo-linguagem;
+    animation-duration: 500ms;
+    animation-delay: 0.5s;
+}
+
+#icone-css{
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    animation: logo-linguagem;
+    animation-duration: 500ms;
+    animation-delay: 1s;
+}
+
+#icone-js {
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    animation: logo-linguagem;
+    animation-duration: 500ms;
+    animation-delay: 1.5s;
+}
+
+#icone-csharp {
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    animation: logo-linguagem;
+    animation-duration: 500ms;
+    animation-delay: 2s;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width: 30%;
+}
+
+.div-procura {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
