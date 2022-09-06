@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BlocoNotasComponent } from './components/bloco-notas/bloco-notas.component';
 import { HomeComponent } from './components/home/home.component';
 import { IntroComponent } from './components/intro/intro.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 
@@ -42,7 +43,8 @@ import { IntroComponent } from './components/intro/intro.component';
     LoginComponent,
     BlocoNotasComponent,
     HomeComponent,
-    IntroComponent
+    IntroComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
