@@ -42,6 +42,9 @@ body{
 .container {
     margin-top: 5px;
     width: 80vw;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 .botao-adicionar > img {
@@ -77,7 +80,7 @@ body{
     width: 100%;
     color: white;
 }
-
+ 
 .coluna {
     margin-left: 10px;
     width: 25%;
@@ -161,6 +164,7 @@ body{
     .container {
         display: flex;
         flex-direction: column;
+        width: 80vw;
     }
 
     .linha {

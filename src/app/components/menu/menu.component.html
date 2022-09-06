@@ -1,0 +1,74 @@
+<div class="container">
+
+    <header>
+        <button routerLink="">Home</button>
+        <a href="https://www.linkedin.com/in/mackson-roberto-santos-da-silva-aaa5b9147/" target="_black"><button>Linkedin</button></a>
+        <a href="https://github.com/MacksonMR" target="_black"><button>Github</button></a>
+    </header>
+
+    <main>
+        
+        <div class="div-filtro">
+
+            <div class=" textfield textfield-linguagem">
+                <h1>Linguagem</h1>
+                <select name="linguagem" id="linguagem">
+                    <option value="html">HTML</option>
+                    <option value="JS">JS</option>
+                    <option value="angular">Angular</option>
+                    <option value="cSharp">C-Sharp</option>
+                </select>
+            </div>
+
+            <div class="textfield textfield-nome-projeto">
+                <h1>Nome de Projeto</h1>
+                <input type="text" id="nome-projeto" placeholder="Nome de Projeto">
+                <h1 style="color: red;">Filtro em implementação</h1>
+            </div>
+
+        </div>
+
+        <div class="container-projetos">
+
+            <div class="tabela-projetos">
+
+                <div class="coluna col-1">
+
+                    <div class="card-projeto">
+                        <img src="../../../assets/projeto-lista.PNG" alt="projeto lista" (click)="redirect('list')">
+                        <h1>Lista de Cadastro</h1>
+                        <p>Projeto de cadastro de pneus. <br> 
+                            A pagina é totalmente responsiva <br>
+                            <marquee behavior="" direction="">Esse projeto necessita do banco dados para exibir e/ou cadastrar um novo pneu</marquee></p>
+                    </div>
+    
+                </div>
+    
+                <div class="coluna col-2">
+    
+                    <div class="card-projeto">
+                        <img src="../../../assets/projeto-bloco.PNG" alt="projeto bloco" (click)="redirect('bloco')">
+                        <h1>Bloco de Notas</h1>
+                        <p>Projeto simples inspirado no bloco de notas do windows 11. <br> 
+                            <marquee behavior="" direction="">Funções com (*) ainda estão em implementação</marquee></p>
+                    </div>
+    
+                </div>
+    
+                <div class="coluna col-3">
+    
+                    <div class="card-projeto">
+                        <img src="../../../assets/projeto-login.PNG" alt="projeto login" (click)="redirect('login')"> 
+                        <h1>Tela de Login</h1>
+                        <p>Projeto de uma tela de autenticação e cadastro de usuário totalmente responsiva. <br> <marquee behavior="" direction="">Não é possivel realizar cadastro ou login nessa tela</marquee></p>
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>

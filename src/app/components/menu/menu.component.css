@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    --font1 : rgb(0, 0, 0);
+    --font2 : rgb(255, 255, 255);
+    --cor3:  rgb(228, 226, 226);
+    --cor1:  rgb(100, 185, 255);
+    --cor2:  rgb(22, 67, 192);
+
+}
+
+.container{
+    height: 100%vh;
+    width: 100%vw;
+}
+
+header {
+    height: 5vh;
+    border: solid 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--cor1);
+}
+
+header > button {
+    border-radius: 6px;
+    margin: 0px 5px 0px 5px;
+    border: none;
+    height: 80%;
+    width: 100px;
+    background-color: var(--cor1);
+    color: var(--font1);
+    letter-spacing: 4px;
+}
+
+a {
+    height: 85%;
+}
+
+a > button {
+    border-radius: 6px;
+    margin: 0px 5px 0px 5px;
+    border: none;
+    height: 90%;
+    width: 100px;
+    background-color: var(--cor1);
+    color: var(--font1);
+    letter-spacing: 4px;
+}
+
+header > button:hover{
+    background-color: var(--cor2);
+    color: var(--font2);
+    cursor: pointer;
+}
+
+a >button:hover {
+    background-color: var(--cor2);
+    color: var(--font2);
+    cursor: pointer;
+}
+
+.div-filtro {
+    height: 10vh;
+    border: solid 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white
+}
+
+.textfield {
+    border: none 1px;
+    margin-left: 20px;
+}
+
+.textfield-linguagem > h1 {
+    font-size: 15px;
+}
+
+.textfield-nome-projeto > h1 {
+    font-size: 15px;
+}
+
+.container-projetos {
+    border: solid 1px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../assets/fundo_portifolio.jpg);
+}
+
+.tabela-projetos {
+    border: none 1px;
+    height: 95%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-projeto {
+    border: solid 1px;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.card-projeto > img {
+    width: 80%;
+    height: 65%;
+    margin-top: 10px;
+}
+
+.card-projeto > img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.card-projeto > p {
+    margin: 0px 5px 0px 5px;
+}
+
+.col-1 {
+    width: 31%;
+    height: 95%;
+}
+
+.col-2 {
+    width: 31%;
+    height: 95%;
+}
+
+.col-3 {
+    width: 31%;
+    height: 95%;
+}
+
+.coluna {
+    margin: 0px 5px 0px 5px;
+}

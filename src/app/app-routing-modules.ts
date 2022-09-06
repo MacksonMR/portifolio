@@ -9,16 +9,18 @@ import { LoginComponent } from "./components/login/login.component";
 import { BlocoNotasComponent } from "./components/bloco-notas/bloco-notas.component";
 import { HomeComponent } from "./components/home/home.component";
 import { IntroComponent } from "./components/intro/intro.component";
+import { MenuComponent } from "./components/menu/menu.component";
 
 const routes: Routes = [
-    {path: '', component: LoginComponent},
+    {path: '', component: HomeComponent},
     {path: 'list' , component: ListRenderComponent},
     {path: 'list/:id' , component: TwoWayBindingComponent},
     {path: 'novo' , component: TwoWayBindingNovoComponent},
-    {path: 'login' , component: LoginComponent},
     {path: 'bloco' , component: BlocoNotasComponent},
     {path: 'home' , component: HomeComponent},
     {path: 'intro' , component: IntroComponent},
+    {path: 'menu' , component: MenuComponent},
+    {path: 'login' , component: LoginComponent}
 ]
 
 @NgModule({

@@ -131,7 +131,7 @@ main{
 }
 
 #btn-projetos:hover {
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     cursor: pointer;
 }
 
