@@ -4,9 +4,49 @@
   <base href="/portifolio/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>body{padding-bottom:500px}</style><link rel="stylesheet" href="styles.f443e218024f7e13.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.f443e218024f7e13.css"></noscript></head>
+  
+  
+<style>body{margin:0;font-family:noto-sans-monospace,"sans-serif"}body *{box-sizing:border-box}*{margin:0}</style><link rel="stylesheet" href="styles.c0c9782ea363af21.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c0c9782ea363af21.css"></noscript></head>
 <body>
   <app-root></app-root>
-<script src="runtime.59d40729ce624578.js" type="module"></script><script src="polyfills.753a2cb3831985e3.js" type="module"></script><script src="main.21b47d28b583a714.js" type="module"></script>
+  <script>
+    
+
+function novaFamilia(){
+    document.getElementById('novaDiv').style.display='block'
+}
+
+function novaFamiliaSalvar(){
+    var select = document.getElementById("input-situacao-nova");
+    var opcaoTexto = select.options[select.selectedIndex].text;
+    var opcaoValor = select.options[select.selectedIndex].value;
+    var Familia = document.getElementById('input-nova-familia').value;
+    var Data = document.getElementById('input-data-criada').value;
+
+    console.log('Familia: ' + Familia);
+    console.log('Data: ' + Data);
+    console.log(opcaoTexto);
+    console.log(opcaoValor); 
+
+    if(Familia != ""){
+        console.log('diferene de vazio')
+    }
+    else{
+        console.log('igual a vazio')
+    }
+}
+
+function cancelarFamilia(){
+    document.getElementById('novaDiv').style.display='none';
+    document.getElementById('input-nova-familia').value = '';
+    document.getElementById('input-data-criada').options = '#01/01/1990';
+}
+
+function editar(id,familia){
+
+}
+  </script>
+<script src="runtime.59d40729ce624578.js" type="module"></script><script src="polyfills.753a2cb3831985e3.js" type="module"></script><script src="main.1b4f41f0f7174be8.js" type="module"></script>
+
 
 </body></html>
